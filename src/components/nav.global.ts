@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { AsyncPipe, CommonModule } from '@angular/common';
 
 @Component({
   selector: 'nav-global',
@@ -25,16 +28,21 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
       </div>
       <div class="navbar bg-base-100 shadow-sm">
         <a
-          routerLink="/links"
+          routerLink="/about/links"
           routerLinkActive="underline"
           [routerLinkActiveOptions]="{ exact: true }"
           class="btn btn-ghost text-2xl"
-          >Links</a
+          >Links [{{ (links$ | async)?.length }}]</a
         >
       </div>
     </div>
   `,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, AsyncPipe, CommonModule],
   standalone: true,
 })
-export class NavGlobal {}
+export class NavGlobal {
+  links$: Observable<string[]>;
+  constructor(private store: Store<{ links: string[] }>) {
+    this.links$ = this.store.select('links');
+  }
+}

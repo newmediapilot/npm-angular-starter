@@ -109,6 +109,7 @@ pages/{page}/{page}.content.*.ts
 
 - [Angular 20](https://angular.dev/)
 - [NGRX](https://ngrx.io/guide/store/install)
+- [Dev Tools](https://ngrx.io/guide/store-devtools)
 - [Yarn](https://yarnpkg.com/)
 - [Daisy UI](https://daisyui.com/components/breadcrumbs/)
 - [Tailwind CSS](https://tailwindcss.com/)

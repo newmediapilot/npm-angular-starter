@@ -5,7 +5,7 @@ import { MainEl } from '../components/core/main.el';
 import { FooterEl } from '../components/core/footer.el';
 import { FooterGlobal } from '../components/footer.global';
 import { BcrumbsGlobal } from '../components/bcrumbs.global';
-import { LinksContent } from './index/links.content';
+import { LinksContent } from './content/links.content';
 import {
   MainPreloaderError,
   MainPreloaderLoading,

@@ -6,5 +6,5 @@ import { LinksPage } from '../pages/links.page';
 export const routes: Routes = [
   { path: '', component: IndexPage },
   { path: 'about', component: AboutPage },
-  { path: 'links', component: LinksPage },
+  { path: 'about/links', component: LinksPage },
 ];

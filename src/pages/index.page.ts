@@ -5,13 +5,13 @@ import { MainEl } from '../components/core/main.el';
 import { FooterEl } from '../components/core/footer.el';
 import { FooterGlobal } from '../components/footer.global';
 import { BcrumbsGlobal } from '../components/bcrumbs.global';
-import { IndexContent } from './index/index.content';
+import { IndexContent } from './content/index.content';
 import {
   MainPreloaderError,
   MainPreloaderLoading,
   MainPreloaderPlaceholder,
 } from '../components/main.preloader';
-import { LinksContent } from './index/links.content';
+import { LinksContent } from './content/links.content';
 
 @Component({
   selector: 'page-home',
