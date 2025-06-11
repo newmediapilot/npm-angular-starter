@@ -2,13 +2,17 @@ import { Component } from '@angular/core';
 import { AsyncPipe, NgForOf } from '@angular/common';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { deleteLink } from '../../reducers';
+import { actionLinkDelete } from '../../reducers';
 
 @Component({
   selector: 'links-content',
   template: `
     <ul>
-      <li class="underline" (click)="onClick(link)" *ngFor="let link of links$ | async">
+      <li
+        class="underline"
+        (click)="onClick(link)"
+        *ngFor="let link of links$ | async"
+      >
         {{ link }} [click to delete]
       </li>
     </ul>
@@ -19,7 +23,7 @@ export class LinksContent {
   links$: Observable<string[]>;
 
   onClick(link: string) {
-    this.store.dispatch(deleteLink({ link }));
+    this.store.dispatch(actionLinkDelete({ link }));
   }
 
   constructor(private store: Store<{ links: string[] }>) {
