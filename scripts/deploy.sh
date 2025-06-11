@@ -77,4 +77,4 @@ deploy
 
 echo "[deploy-preview.sh] "
 echo "[deploy-preview.sh] Build complete..."
-echo "[deploy-preview.sh] https://newmediapilot.github.io/react-19-bike-shop"
+echo "[deploy-preview.sh] https://newmediapilot.github.io/npm-angular-starter/my-app/browser/"
