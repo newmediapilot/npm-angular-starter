@@ -6,7 +6,7 @@ import { FooterEl } from '../components/core/footer.el';
 import { FooterGlobal } from '../components/footer.global';
 import { BcrumbsGlobal } from '../components/bcrumbs.global';
 import { IndexContent } from './index/index.content';
-import {AboutContent} from './index/about.content';
+import { AboutContent } from './index/about.content';
 
 @Component({
   selector: 'page-about',
@@ -24,6 +24,14 @@ import {AboutContent} from './index/about.content';
       </footer-el>
     </div>
   `,
-  imports: [NavGlobal, HeaderEl, MainEl, FooterEl, FooterGlobal, BcrumbsGlobal, AboutContent],
+  imports: [
+    NavGlobal,
+    HeaderEl,
+    MainEl,
+    FooterEl,
+    FooterGlobal,
+    BcrumbsGlobal,
+    AboutContent,
+  ],
 })
 export class AboutPage {}

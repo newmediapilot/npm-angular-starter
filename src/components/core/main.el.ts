@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'main-el',
   standalone: true,
   template: `
-    <main>
+    <main class="p-4">
       <ng-content></ng-content>
     </main>
   `,
