@@ -6,17 +6,31 @@ import { FooterEl } from '../components/core/footer.el';
 import { FooterGlobal } from '../components/footer.global';
 import { BcrumbsGlobal } from '../components/bcrumbs.global';
 import { IndexContent } from './index/index.content';
+import {
+  MainPreloaderError,
+  MainPreloaderLoading,
+  MainPreloaderPlaceholder,
+} from '../components/main.preloader';
+import { LinksContent } from './index/links.content';
 
 @Component({
   selector: 'page-home',
   template: `
-    <div class="grid grid-rows-[100px_1fr_80px] h-screen">
+    <div class="grid grid-rows-[100px_1fr_60px] h-screen">
       <header-el>
         <nav-global />
         <bcrumbs-global />
       </header-el>
       <main-el>
-        <index-content />
+        @defer {
+          <index-content />
+        } @loading {
+          <main-preloader-loading />
+        } @placeholder (minimum 1.75s) {
+          <main-preloader-placeholder />
+        } @error {
+          <main-preloader-error />
+        }
       </main-el>
       <footer-el>
         <footer-global />
@@ -31,6 +45,9 @@ import { IndexContent } from './index/index.content';
     FooterGlobal,
     BcrumbsGlobal,
     IndexContent,
+    MainPreloaderError,
+    MainPreloaderLoading,
+    MainPreloaderPlaceholder,
   ],
 })
 export class IndexPage {}

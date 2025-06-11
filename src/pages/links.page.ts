@@ -5,7 +5,7 @@ import { MainEl } from '../components/core/main.el';
 import { FooterEl } from '../components/core/footer.el';
 import { FooterGlobal } from '../components/footer.global';
 import { BcrumbsGlobal } from '../components/bcrumbs.global';
-import { AboutContent } from './index/about.content';
+import { LinksContent } from './index/links.content';
 import {
   MainPreloaderError,
   MainPreloaderLoading,
@@ -13,7 +13,7 @@ import {
 } from '../components/main.preloader';
 
 @Component({
-  selector: 'page-about',
+  selector: 'page-links',
   template: `
     <div class="grid grid-rows-[100px_1fr_60px] h-screen">
       <header-el>
@@ -22,7 +22,7 @@ import {
       </header-el>
       <main-el>
         @defer {
-          <about-content />
+          <links-content />
         } @loading {
           <main-preloader-loading />
         } @placeholder (minimum 1.75s) {
@@ -43,10 +43,10 @@ import {
     FooterEl,
     FooterGlobal,
     BcrumbsGlobal,
-    AboutContent,
+    LinksContent,
+    MainPreloaderError,
     MainPreloaderLoading,
     MainPreloaderPlaceholder,
-    MainPreloaderError,
   ],
 })
-export class AboutPage {}
+export class LinksPage {}

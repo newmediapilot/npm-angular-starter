@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from '../reducers';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [
+    RouterOutlet,
+    // @ts-ignore
+  ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
