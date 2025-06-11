@@ -1,1 +1,0 @@
-import{Ma as n,rb as o}from"./chunk-GK2SWTX3.js";var a=class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=n({type:e,selectors:[["about-content"]],decls:1,vars:0,template:function(t,c){t&1&&o(0," About Content... ")},encapsulation:2})};export{a as AboutContent};
