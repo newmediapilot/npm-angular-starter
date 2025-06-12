@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { AsyncPipe, NgForOf } from '@angular/common';
+import { ImgEl } from '../../components/core/img.el';
 
 interface ListItem {
   id: number;
@@ -13,7 +14,7 @@ interface ListItem {
 @Component({
   selector: 'about-content',
   standalone: true,
-  imports: [AsyncPipe, NgForOf],
+  imports: [AsyncPipe, NgForOf, ImgEl],
   template: `
     <table class="table">
       <thead>
@@ -30,8 +31,10 @@ interface ListItem {
           <td>{{ item.title }}</td>
           <td>{{ item.description }}</td>
           <td>
-            <a [href]="item.image" target="_blank" rel="noopener noreferrer">
-              <img [src]="item.image" [alt]="item.title" width="100" />
+            <a [href]="item.image"
+               class="inline-block max-w-[200px]"
+               target="_blank">
+              <img-el [src]="item.image"></img-el>
             </a>
           </td>
         </tr>

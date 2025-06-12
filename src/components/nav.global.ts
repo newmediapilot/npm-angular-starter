@@ -3,6 +3,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { AsyncPipe, CommonModule } from '@angular/common';
+import { PrefetchHover } from '../service/prefetch.directive';
 
 @Component({
   selector: 'nav-global',
@@ -11,6 +12,7 @@ import { AsyncPipe, CommonModule } from '@angular/common';
       <div class="navbar bg-base-100 shadow-sm">
         <a
           routerLink="/"
+          prefetchHover="underline"
           routerLinkActive="underline"
           [routerLinkActiveOptions]="{ exact: true }"
           class="btn btn-ghost text-2xl"
@@ -20,6 +22,7 @@ import { AsyncPipe, CommonModule } from '@angular/common';
       <div class="navbar bg-base-100 shadow-sm">
         <a
           routerLink="/about"
+          prefetchHover="/about"
           routerLinkActive="underline"
           [routerLinkActiveOptions]="{ exact: true }"
           class="btn btn-ghost text-2xl"
@@ -29,6 +32,7 @@ import { AsyncPipe, CommonModule } from '@angular/common';
       <div class="navbar bg-base-100 shadow-sm">
         <a
           routerLink="/about/links"
+          prefetchHover="/about/links"
           routerLinkActive="underline"
           [routerLinkActiveOptions]="{ exact: true }"
           class="btn btn-ghost text-2xl"
@@ -37,7 +41,13 @@ import { AsyncPipe, CommonModule } from '@angular/common';
       </div>
     </div>
   `,
-  imports: [RouterLink, RouterLinkActive, AsyncPipe, CommonModule],
+  imports: [
+    RouterLink,
+    RouterLinkActive,
+    AsyncPipe,
+    CommonModule,
+    PrefetchHover,
+  ],
   standalone: true,
 })
 export class NavGlobal {
