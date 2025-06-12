@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
-import { NavGlobal } from '../components/nav.global';
-import { HeaderEl } from '../components/core/header.el';
-import { MainEl } from '../components/core/main.el';
-import { FooterEl } from '../components/core/footer.el';
-import { FooterGlobal } from '../components/footer.global';
-import { BcrumbsGlobal } from '../components/bcrumbs.global';
-import { IndexContent } from './content/index.content';
+import { NavGlobal } from '../../components/nav.global';
+import { HeaderEl } from '../../components/core/header.el';
+import { MainEl } from '../../components/core/main.el';
+import { FooterEl } from '../../components/core/footer.el';
+import { FooterGlobal } from '../../components/footer.global';
+import { BcrumbsGlobal } from '../../components/bcrumbs.global';
+import { IndexContent } from './index.content';
 import {
   MainPreloaderError,
   MainPreloaderLoading,
   MainPreloaderPlaceholder,
-} from '../components/main.preloader';
-import { LinksContent } from './content/links.content';
+} from '../../components/main.preloader';
+import { LinksContent } from '../links/links.content';
 
 @Component({
   selector: 'page-home',

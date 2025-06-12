@@ -6,21 +6,26 @@ import {
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
-import { routes } from './app.routes';
+import { routes } from './pages/routes';
 import { provideState, provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
-import { linksFeature } from '../ngrx/links.feature';
-import { listFeature } from '../ngrx/list.feature';
-import { metaReducers } from '../ngrx/metaReducers';
+import { linksReducer } from './pages/links/links.reducer';
+import { aboutReducer } from './pages/about/about.reducer';
+import { metaReducers } from './ngrx/meta.reducers';
+import { provideEffects } from '@ngrx/effects';
+import { LoadListEffect } from './pages/about/about.resolver';
+import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
+    provideHttpClient(),
     provideStore({}, { metaReducers }),
-    provideState(linksFeature),
-    provideState(listFeature),
+    provideState(linksReducer),
+    provideState(aboutReducer),
+    provideEffects([LoadListEffect]),
     provideStoreDevtools({
       maxAge: 25, // Retains last 25 states
       logOnly: !isDevMode(), // Restrict extension to log-only mode

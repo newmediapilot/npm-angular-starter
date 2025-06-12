@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
-import { NavGlobal } from '../components/nav.global';
-import { HeaderEl } from '../components/core/header.el';
-import { MainEl } from '../components/core/main.el';
-import { FooterEl } from '../components/core/footer.el';
-import { FooterGlobal } from '../components/footer.global';
-import { BcrumbsGlobal } from '../components/bcrumbs.global';
-import { AboutContent } from './content/about.content';
+import { NavGlobal } from '../../components/nav.global';
+import { HeaderEl } from '../../components/core/header.el';
+import { MainEl } from '../../components/core/main.el';
+import { FooterEl } from '../../components/core/footer.el';
+import { FooterGlobal } from '../../components/footer.global';
+import { BcrumbsGlobal } from '../../components/bcrumbs.global';
+import { AboutContent } from './about.content';
 import {
   MainPreloaderError,
   MainPreloaderLoading,
   MainPreloaderPlaceholder,
-} from '../components/main.preloader';
+} from '../../components/main.preloader';
+
+// TODO: Fixture
+import * as aboutFixture from '../../db.json';
+export { aboutFixture };
 
 @Component({
   selector: 'page-about',

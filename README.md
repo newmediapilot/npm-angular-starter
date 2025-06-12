@@ -121,12 +121,12 @@ pages/{page}/{page}.content.*.ts
 
 # References:
 
-| Tool            | URL                                       | Description                              | Notes                                                                                                                           |
-|-----------------|-------------------------------------------|------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| Akita           | https://opensource.salesforce.com/akita/  | Reactive state (agnostic)                | Nice API but older                                                                                                              |
-| NGXS            | https://www.npmjs.com/package/@ngxs/store | Angular specific state                   | Simple shorthand API, `dispatch()` returns action interface `var {greet} = dispatch(Greet) && greet('message')`                 |
-| Daisy UI        | https://daisyui.com/                      | A UI component library based on Tailwind | Similar to Radix & Skeleton                                                                                                     |
-| Angular Defer   | https://angular.dev/guide/templates/defer | Lazy loading components                  | Code Splitting where "Components, directives, pipes, and any component CSS styles can be deferred when loading an application." |
+| Tool            | URL                                          | Description                              | Notes                                                                                                                           |
+| --------------- | -------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Akita           | https://opensource.salesforce.com/akita/     | Reactive state (agnostic)                | Nice API but older                                                                                                              |
+| NGXS            | https://www.npmjs.com/package/@ngxs/store    | Angular specific state                   | Simple shorthand API, `dispatch()` returns action interface `var {greet} = dispatch(Greet) && greet('message')`                 |
+| Daisy UI        | https://daisyui.com/                         | A UI component library based on Tailwind | Similar to Radix & Skeleton                                                                                                     |
+| Angular Defer   | https://angular.dev/guide/templates/defer    | Lazy loading components                  | Code Splitting where "Components, directives, pipes, and any component CSS styles can be deferred when loading an application." |
 | Feature Creator | https://ngrx.io/guide/store/feature-creators | Analogous to `createSlice`               | Code Splitting where "Components, directives, pipes, and any component CSS styles can be deferred when loading an application." |
 
 > AI was used to generate `db.json`

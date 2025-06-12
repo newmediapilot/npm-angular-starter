@@ -6,18 +6,20 @@ const initialState: string[] = ['Link1', 'Link2', 'Link3'];
 
 // Key
 export const deleteLink = createAction(
-  '[Link] Delete',
+  '@link/deleteLink',
   props<{ link: string }>(),
 );
 
 // Reducer
 const reducer = createReducer(
   initialState,
-  on(deleteLink, (state, { link }) => state.filter((l) => l !== link)),
+  on(deleteLink, (state, { link }) => {
+    return state.filter((l) => l !== link);
+  }),
 );
 
 // Slice
-export const linksFeature = createFeature({
+export const linksReducer = createFeature({
   name: 'links',
   reducer,
 });

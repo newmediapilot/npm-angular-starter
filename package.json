@@ -1,7 +1,8 @@
 {
   "name": "npm-angular-starter",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "homepage": "https://newmediapilot.github.io/npm-angular-starter/my-app/browser/",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "dev": "ng serve",
@@ -13,32 +14,29 @@
     "gf": "bash scripts/git-flatten-branch.sh",
     "gw": "node scripts/git-watch.js",
     "pr": "prettier --write \"src/**/*\"",
-    "reset": "rm -rf node_modules && rm -rf ./*.lock && yarn install"
+    "reset": "rm -rf node_modules && rm -rf ./*.lock && yarn install",
+    "prepare": "husky install"
   },
-  "private": true,
   "dependencies": {
+    "@angular/build": "^20.0.1",
+    "@angular/cli": "^20.0.1",
     "@angular/common": "^20.0.0",
     "@angular/compiler": "^20.0.0",
+    "@angular/compiler-cli": "^20.0.0",
     "@angular/core": "^20.0.0",
     "@angular/forms": "^20.0.0",
     "@angular/platform-browser": "^20.0.0",
     "@angular/router": "^20.0.0",
     "@datorama/akita": "7.1.1",
+    "@ngrx/effects": "^19.2.1",
     "@ngrx/store": "^19.2.1",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.15.0"
-  },
-  "devDependencies": {
-    "@angular/build": "^20.0.1",
-    "@angular/cli": "^20.0.1",
-    "@angular/compiler-cli": "^20.0.0",
     "@ngrx/store-devtools": "^19.2.1",
     "@tailwindcss/postcss": "^4.1.8",
     "@types/jasmine": "~5.1.0",
     "autoprefixer": "^10.4.21",
     "daisyui": "^5.0.43",
     "gh-pages": "^6.3.0",
+    "husky": "^9.1.7",
     "jasmine-core": "~5.7.0",
     "json-server": "^1.0.0-beta.3",
     "karma": "~6.4.0",
@@ -48,7 +46,10 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "postcss": "^8.5.4",
     "prettier": "^3.5.3",
+    "rxjs": "~7.8.0",
     "tailwindcss": "^4.1.8",
-    "typescript": "~5.8.2"
+    "tslib": "^2.3.0",
+    "typescript": "~5.8.2",
+    "zone.js": "~0.15.0"
   }
 }

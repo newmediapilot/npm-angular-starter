@@ -1,15 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { LoadListEffect } from './pages/about/about.resolver';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    // @ts-ignore
-  ],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.scss',
 })
 export class App {
   protected title = 'angular-starter';
