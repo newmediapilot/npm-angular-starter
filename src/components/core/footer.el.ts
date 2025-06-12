@@ -4,9 +4,9 @@ import { Component, Input } from '@angular/core';
   selector: 'footer-el',
   standalone: true,
   template: `
-    <footer class="p-4">
-      <ng-content></ng-content>
-    </footer>
+      <footer class="sticky bottom-0 p-4 z-10">
+          <ng-content/>
+      </footer>
   `,
 })
 export class FooterEl {}
