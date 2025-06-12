@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AsyncPipe, NgForOf } from '@angular/common';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import {deleteLink} from '../../reducers/links.feature';
+import { deleteLink } from '../../ngrx/links.feature';
 
 @Component({
   selector: 'links-content',

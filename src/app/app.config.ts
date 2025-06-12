@@ -9,9 +9,9 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideState, provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
-import { linksFeature } from '../reducers/links.feature';
-import { listFeature } from '../reducers/list.feature';
-import {metaReducers} from '../reducers';
+import { linksFeature } from '../ngrx/links.feature';
+import { listFeature } from '../ngrx/list.feature';
+import { metaReducers } from '../ngrx/metaReducers';
 
 export const appConfig: ApplicationConfig = {
   providers: [

@@ -1,9 +1,12 @@
 import { createFeature, createReducer } from '@ngrx/store';
 
-const initialState: any[] = ['List1', 'List2', 'List3'];
+// Initial State
+const initialState: any[] = [];
 
+// Reducer
 const reducer = createReducer(initialState);
 
+// Slice
 export const listFeature = createFeature({
   name: 'list',
   reducer,
