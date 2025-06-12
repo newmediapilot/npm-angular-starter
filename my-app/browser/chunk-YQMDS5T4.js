@@ -1,1 +1,0 @@
-import{Ma as n,eb as o,fb as a,rb as i}from"./chunk-GK2SWTX3.js";var s=class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=n({type:e,selectors:[["about-content"]],decls:2,vars:0,template:function(t,m){t&1&&(o(0,"div"),i(1,"About content... images"),a())},encapsulation:2})};export{s as AboutContent};

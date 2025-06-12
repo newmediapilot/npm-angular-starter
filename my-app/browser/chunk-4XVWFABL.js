@@ -1,0 +1,1 @@
+import{E as n,H as r,I as i,r as e,s as t}from"./chunk-C6K5S6QJ.js";var s=["Link1","Link2","Link3"],l=e("@link/deleteLink",t()),a=i(s,r(l,(o,{link:c})=>o.filter(k=>k!==c))),m=n({name:"links",reducer:a});export{l as a,m as b};

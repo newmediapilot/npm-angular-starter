@@ -1,1 +1,0 @@
-import{Ma as n,rb as o}from"./chunk-GK2SWTX3.js";var i=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["index-content"]],decls:1,vars:0,template:function(e,c){e&1&&o(0," Index Content... ")},encapsulation:2})};export{i as IndexContent};
