@@ -1,6 +1,6 @@
 {
   "name": "npm-angular-starter",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "homepage": "https://newmediapilot.github.io/npm-angular-starter/my-app/browser/",
   "private": true,
   "scripts": {

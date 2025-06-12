@@ -25,24 +25,6 @@
       "image": "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg"
     },
     {
-      "id": 4,
-      "title": "Dubai",
-      "description": "Cillum dolore eu fugiat nulla pariatur.",
-      "image": "https://images.pexels.com/photos/1365882/pexels-photo-1365882.jpeg"
-    },
-    {
-      "id": 5,
-      "title": "Rome",
-      "description": "Excepteur sint occaecat cupidatat non proident.",
-      "image": "https://images.pexels.com/photos/1287466/pexels-photo-1287466.jpeg"
-    },
-    {
-      "id": 6,
-      "title": "Toronto",
-      "description": "Sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "image": "https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg"
-    },
-    {
       "id": 7,
       "title": "Hong Kong",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
