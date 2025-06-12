@@ -1,10 +1,10 @@
 {
   "name": "npm-angular-starter",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "homepage": "https://newmediapilot.github.io/npm-angular-starter/my-app/browser/",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "dev": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

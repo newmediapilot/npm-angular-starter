@@ -11,12 +11,14 @@ import { provideState, provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { linksFeature } from '../reducers/links.feature';
 import { listFeature } from '../reducers/list.feature';
+import {metaReducers} from '../reducers';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
+    provideStore({}, { metaReducers }),
     provideState(linksFeature),
     provideState(listFeature),
     provideStoreDevtools({
