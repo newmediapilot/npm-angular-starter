@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from '../reducers';
 
 @Component({
   selector: 'app-root',

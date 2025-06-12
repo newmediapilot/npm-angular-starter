@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AsyncPipe, NgForOf } from '@angular/common';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { actionLinkDelete } from '../../reducers';
+import {deleteLink} from '../../reducers/links.feature';
 
 @Component({
   selector: 'links-content',
@@ -23,7 +23,7 @@ export class LinksContent {
   links$: Observable<string[]>;
 
   onClick(link: string) {
-    this.store.dispatch(actionLinkDelete({ link }));
+    this.store.dispatch(deleteLink({ link }));
   }
 
   constructor(private store: Store<{ links: string[] }>) {
